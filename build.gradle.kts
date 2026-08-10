@@ -20,6 +20,7 @@ dependencies {
 
 sourceSets.create("media") {
     java.srcDir("media")
+    java.srcDir("42/media")
 
     compileClasspath += sourceSets.main.get().compileClasspath
 }
@@ -51,6 +52,8 @@ val buildWorkshop by tasks.registering {
             rename("workshop_beta.txt", "workshop.txt")
         }
 
+        // Build 41 reads the mod folder itself: mod.info at the root, and the texture
+        // pack under media.
         copy {
             from(if (project.hasProperty("betaBuild")) "workshop/poster_beta.png" else "workshop/poster.png", "workshop/mod.info")
             into(modPath)
@@ -59,6 +62,18 @@ val buildWorkshop by tasks.registering {
         copy {
             from("media")
             into("$modPath/media")
+        }
+
+        // Build 42 reads a version folder instead and ignores everything at the mod
+        // root, so it gets its own mod.info next to its own media.
+        copy {
+            from("42")
+            into("$modPath/42")
+        }
+        copy {
+            from(if (project.hasProperty("betaBuild")) "workshop/poster_beta.png" else "workshop/poster.png")
+            into("$modPath/42")
+            rename("poster_beta.png", "poster.png")
         }
     }
 }
@@ -72,8 +87,11 @@ val localDeploy by tasks.registering {
 
     doFirst {
         if (project.hasProperty("betaBuild")) {
-            File("$modPath/mod.info").writeText(File("$modPath/mod.info").readText().replace("(id=.*)".toRegex(), "$1-beta"))
-            File("$modPath/mod.info").writeText(File("$modPath/mod.info").readText().replaceFirst("(name=.*)".toRegex(), "$1 [Beta]"))
+            listOf("$modPath/mod.info", "$modPath/42/mod.info").forEach { path ->
+                val info = File(path)
+                info.writeText(info.readText().replace("(id=.*)".toRegex(), "$1-beta"))
+                info.writeText(info.readText().replaceFirst("(name=.*)".toRegex(), "$1 [Beta]"))
+            }
         }
     }
 

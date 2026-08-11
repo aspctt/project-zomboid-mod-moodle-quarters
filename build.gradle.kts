@@ -55,7 +55,7 @@ val buildWorkshop by tasks.registering {
         // Build 41 reads the mod folder itself: mod.info at the root, and the texture
         // pack under media.
         copy {
-            from(if (project.hasProperty("betaBuild")) "workshop/poster_beta.png" else "workshop/poster.png", "workshop/mod.info")
+            from(if (project.hasProperty("betaBuild")) "workshop/poster_beta.png" else "workshop/poster.png", "workshop/icon.png", "workshop/mod.info")
             into(modPath)
             rename("poster_beta.png", "poster.png")
         }
@@ -71,7 +71,7 @@ val buildWorkshop by tasks.registering {
             into("$modPath/42")
         }
         copy {
-            from(if (project.hasProperty("betaBuild")) "workshop/poster_beta.png" else "workshop/poster.png")
+            from(if (project.hasProperty("betaBuild")) "workshop/poster_beta.png" else "workshop/poster.png", "workshop/icon.png")
             into("$modPath/42")
             rename("poster_beta.png", "poster.png")
         }

@@ -1,6 +1,6 @@
 version=1
 id=2854030563
-title=Moodle Quarters
+title=Moodle Quarters [B42/B41]
 description=[h1]Informations:[/h1]
 description=
 description=Changes one additional quarter of the moodle background to a square for each moodle level.
@@ -16,6 +16,7 @@ description=[/list]
 description=
 description=[h1]Credits:[/h1]
 description=[list]
+description=[*] Thanks to [url=https://steamcommunity.com/id/aspctt]Aspct[/url] for helping me update the mod to Build 42. <3
 description=[*] Thanks to [url=https://steamcommunity.com/id/safc]Riko Prushka[/url] for showing me how to create pack files with only the changed files. :)
 description=[/list]
 description=

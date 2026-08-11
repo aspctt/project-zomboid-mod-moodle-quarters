@@ -15,6 +15,7 @@ description=[/list]
 description=
 description=[h1]Credits:[/h1]
 description=[list]
+description=[*] Thanks to [url=https://steamcommunity.com/id/aspctt]Aspct[/url] for helping me update the mod to Build 42. <3
 description=[*] Thanks to [url=https://steamcommunity.com/id/safc]Riko Prushka[/url] for showing me how to create pack files with only the changed files. :)
 description=[/list]
 description=

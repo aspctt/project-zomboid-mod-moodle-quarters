@@ -1,9 +1,13 @@
 version=1
 id=2854030563
-title=Moodle Quarters
+title=Moodle Quarters [B42/B41]
 description=[h1]Informations:[/h1]
 description=
 description=Changes one additional quarter of the moodle background to a square for each moodle level.
+description=
+description=Works on build 41 and build 42. Build 42 draws the moodle stack from a single background
+description=texture that it tints by level, so on that build the mod ships the level shapes itself and
+description=draws the stack itself, keeping the vanilla position, animation and hover label.
 description=
 description=[h1]Known issues:[/h1]
 description=[list]
@@ -12,6 +16,7 @@ description=[/list]
 description=
 description=[h1]Credits:[/h1]
 description=[list]
+description=[*] Thanks to [url=https://steamcommunity.com/id/aspctt]Aspct[/url] for helping me update the mod to Build 42. <3
 description=[*] Thanks to [url=https://steamcommunity.com/id/safc]Riko Prushka[/url] for showing me how to create pack files with only the changed files. :)
 description=[/list]
 description=
@@ -32,5 +37,5 @@ description=[list]
 description=[*] https://github.com/drandarov-io/project-zomboid-mod-moodle-quarters
 description=[/list]
 description=
-tags=Build 41;Food;Interface;Misc;Silly/Fun;Textures
+tags=Build 41;Build 42;Food;Interface;Misc;Silly/Fun;Textures
 visibility=public

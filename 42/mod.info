@@ -3,4 +3,4 @@ id=moodle_quarters
 description=Changes one additional quarter of the moodle background to a square for each moodle level.
 poster=poster.png
 icon=icon.png
-pack=Quarters
+versionMin=42.0

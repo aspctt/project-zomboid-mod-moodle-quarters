@@ -1,5 +1,9 @@
-name=Moodle Quarters
+name=Moodle Quarters [B42]
 id=moodle_quarters
+author=DahakaMVl
+modversion=2.0
+url=https://github.com/drandarov-io/project-zomboid-mod-moodle-quarters
+# workshop id: 2854030563
 description=Changes one additional quarter of the moodle background to a square for each moodle level.
 poster=poster.png
 icon=icon.png

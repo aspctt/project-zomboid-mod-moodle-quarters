@@ -1,6 +1,6 @@
 version=1
 id=2854030563
-title=Moodle Quarters [B42/B41]
+title=Moodle Quarters [B42]
 description=[h1]Informations:[/h1]
 description=
 description=Changes one additional quarter of the moodle background to a square for each moodle level.
